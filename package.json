@@ -1,0 +1,33 @@
+{
+  "name": "quanlygiaidauesport",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql2": "2.0.2",
+    "sequelize": "5.21.3",
+    "express-handlebars": "3.1.0"
+  },
+  "description": "Yêu cầu để run project bằng hướng dẫn bên dưới, cài ubuntu subsystem, mở terminal trên thanh công cụ\r     - cài đặt nodejs: sudo apt-get install nodejs\r     - cài đặt nodemon: sudo npm install -g nodemon\r     - cài các node_modules: npm install\r     - sửa lại file .env thông tin cấu hình database\r     - để start server: npm start",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1612584/DoAnNMCNPM_Nhom6_CQ2017.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1612584/DoAnNMCNPM_Nhom6_CQ2017/issues"
+  },
+  "homepage": "https://github.com/1612584/DoAnNMCNPM_Nhom6_CQ2017#readme"
+}
