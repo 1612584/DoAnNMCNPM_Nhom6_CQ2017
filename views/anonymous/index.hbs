@@ -1,2 +1,16 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}} anonymous</p>
+{{>header_index}}
+<div class="container">
+    <div class="row"> <h1 class="offset-md-4">Hình ảnh nổi bật</h1></div>
+    <div class="row row2">
+        <div class="col-md-2">
+           <button data-id="2" class="offset-md-8"><i class="fas fa-backward"></i></button>
+        </div>
+        <div class="col-md-8"> <img src="/images/index1.jpg" width="100%" class="img-fluid" alt="Responsive image"></div>
+        <div class="col-md-2">
+           <button data-id="2"><i class="fas fa-forward"></i></button> 
+        </div>
+       
+    </div>
+   
+</div>
+<script src="/javascripts/anonymous/index.js"></script>
