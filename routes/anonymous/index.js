@@ -13,6 +13,7 @@ router.get('/',(req,res)=>{
 })
 router
     .get('/esport', esportTournament.read)
+    .get('/esport/:id',esportTournament.readById)
     .get('/matchResult', matchResult.read)
     .get('/playerList', playerList.read)
     .get('/tournamentCalendar', tounamentCalendar.read);
