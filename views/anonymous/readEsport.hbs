@@ -1,0 +1,49 @@
+{{>header_index}}
+<div class="wrapper">
+
+    {{>sidebar_esport}}
+    <div id="container" class="mr-1" style="background-color: rgb(225, 232, 241);">
+        <button type="button" id="sidebarCollapse" class="navbar-btn">
+            <i class="fas fa-list-alt"></i>
+        </button>
+        <div class="mr-4" >
+            <div class="row ml-2 mt-2">
+            <h1 class="col-md-12 offset-md-4">{{tourTitle}}</h1>
+            </div>
+        <div class="row ml-1 mt-4">
+            <div class="w3-card-1">
+                <button type="button">
+                   <i class="fas fa-backward"></i>
+                </button>
+            </div>
+                
+             
+            {{#each tournamentList}}
+            <div class="w3-card-3 ml-1">
+                <img src="/images/giaidau/{{id}}/{{id}}.jpg" alt="Alps">
+                <div class="w3-container w3-center">
+                    <a data-id="{{id}}" href="/esport/{{id}}">{{name}}</a>
+                </div>
+            </div>
+            {{/each}}
+            <div class="w3-card-1 ml-1">
+                <button type="button">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+        </div>
+        </div>
+        
+    <div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        });
+
+    });
+</script>
