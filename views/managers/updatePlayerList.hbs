@@ -1,0 +1,94 @@
+<!-- As a heading -->
+{{>manager_navbar}}
+
+<div class="wrapper">
+    <!-- Sidebar -->
+    {{>manager_sidebar}}
+
+    <div class="mt-3" id="create-tournament">
+        <div class="col-8" style="text-align: center;">
+            <h1 style="text-align: center;">Cập nhật danh sách thi đấu</h1>
+            <form class="mt-4" action="" method="POST">
+                <div class="form-group row mt-4">
+                    <label for="ten-giai-dau" class="col-sm-3 col-form-label">Giải Đấu</label>
+                    <div class="col-sm-9">
+                        <select type="text" class="form-control" id="ten-giai-dau">
+                            <option selected>Liên Minh Huyền Thoại lần I</option>
+                            <option>Liên Minh Huyền Thoại lần II</option>
+                            <option>Liên Minh Huyền Thoại lần III</option>
+                            <option>PlayerUnknown's Battle Ground lần IV</option>
+                        </select>
+                    </div>
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tên</th>
+                            <th scope="col">Tuỳ Chọn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Apple01</td>
+                            <td>
+                                <div class="btn btn-sm btn-outline-danger">Delete</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Apple02</td>
+                            <td>
+                                <div class="btn btn-sm btn-outline-danger">Delete</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Banana01</td>
+                            <td>
+                                <div class="btn btn-sm btn-outline-danger">Delete</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Banana02</td>
+                            <td>
+                                <div class="btn btn-sm btn-outline-danger">Delete</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Coconut01</td>
+                            <td>
+                                <div class="btn btn-sm btn-outline-danger">Delete</div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div style="float: right;">
+                    <button class="btn btn-danger mt-4" href="#">Huỷ</button>
+                    <button class="btn btn-primary mt-4" type="submit" href="#">Điều Chỉnh</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+<script>
+    $('#thoi-gian').datetimepicker({
+        // format: 'd/m/Y H:i'
+        format: 'd/m/Y',
+        timepicker: false,
+        mask: true,
+        value: 'dd-mm-yyyy'
+    });
+</script>
