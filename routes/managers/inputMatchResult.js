@@ -1,5 +1,5 @@
 module.exports.get = (req, res) => {
-    res.render('managers/createTournamentCalendar', {
+    res.render('managers/inputMatchResult', {
         layout: 'manager'
     });
 }
