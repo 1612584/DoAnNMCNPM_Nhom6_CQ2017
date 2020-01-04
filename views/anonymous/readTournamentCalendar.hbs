@@ -1,0 +1,101 @@
+{{>header_index}}
+<div class="wrapper">
+    <div class="container">
+        <div id="tree-simple" style=""> </div>
+
+    </div>
+</div>
+<script src="/plugins/treant-js-master/vendor/raphael.js"></script>
+<script src="/plugins/treant-js-master/Treant.js"></script>
+<script>
+
+    //call api to get json object 
+
+    //create node Structure for 
+
+    //config chart => add more infor 
+    //
+    const simple_chart_config = {
+        chart: {
+            container: "#tree-simple",
+            connectors: {
+                type: "step",
+                style: {
+                    stroke:'red'
+
+                }
+            },
+            node: {
+               
+            },
+            animation: {
+                connectorsAnimation: 450
+            }
+        },
+
+        nodeStructure: {
+            text: { name: "Parent node" },
+            children: [
+                {
+                    text: {
+                        title: "One of kind",
+                        name: {
+                            val: "contact me",
+                            href: "http://twitter.com/",
+                            target: "_self"
+                        }
+                    },
+                    children: [
+                        {
+                            text: {    name: {
+                            val: "contact me",
+                            href: "http://twitter.com/",
+                            target: "_self"
+                        } }
+                        },
+                        {
+                            text: {    name: {
+                            val: "contact me",
+                            href: "http://twitter.com/",
+                            target: "_self"
+                        } }
+                        }
+                    ]
+                },
+                {
+                    text: {
+                        title: "One of kind",
+                        name: {
+                            val: "contact me",
+                            href: "http://twitter.com/",
+                            target: "_self"
+                        }
+                    },
+                    children: [
+                        {
+                            text: {
+                        title: "One of kind",
+                        name: {
+                            val: "contact me",
+                            href: "http://twitter.com/",
+                            target: "_self"
+                        }
+                    }
+                        },
+                        {
+                            text: {
+                        title: "One of kind",
+                        name: {
+                            val: "contact me",
+                            href: "http://twitter.com/",
+                            target: "_self"
+                        }
+                    }
+                        }
+                    ]
+                }
+            ]
+        }
+    };
+    var my_chart = new Treant(simple_chart_config);
+</script>
