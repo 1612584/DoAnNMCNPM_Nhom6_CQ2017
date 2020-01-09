@@ -8,7 +8,6 @@ var hbs = require('express-handlebars');
 require('dotenv').config();
 var indexRouter = require(pathConfig.index);
 var managerRouter = require(pathConfig.manager);
-
 var app = express();
 
 // view engine setup

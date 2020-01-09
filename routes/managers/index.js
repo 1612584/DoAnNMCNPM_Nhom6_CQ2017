@@ -28,4 +28,13 @@ router.get('/updatePlayerList', updatePlayerList.get);
 // .get('/inputMatchResult', matchResult.read)
 // .get('/playerList', playerList.read)
 // .get('/tournamentCalendar', tounamentCalendar.read);
+
+
+
+
+
+
+
+router.post('/createEsport', createEsport.post);
+
 module.exports = router;
