@@ -9,11 +9,11 @@
         <div class="col-8" style="text-align: center;">
             <h1 style="text-align: center;">Nhập Danh Sách Tuyển Thủ</h1>
 
-            <form action="" method="POST">
+            <form action="/manager/inputPlayerList" method="POST">
                 <div class="form-group row mt-4">
                     <label for="ten-giai-dau" class="col-sm-3 col-form-label">Tên Giải Đấu</label>
                     <div class="col-sm-9">
-                        <select type="text" class="form-control" id="ten-giai-dau">
+                        <select name="ten-giai-dau" type="text" class="form-control" id="ten-giai-dau">
                             <option selected>Liên Minh Huyền Thoại lần I</option>
                             <option>Liên Minh Huyền Thoại lần II</option>
                             <option>Liên Minh Huyền Thoại lần III</option>
@@ -24,13 +24,14 @@
                 <div class="row">
                     <div class="col-md-12 offset-md-3">
                         <div class="custom-file" style=" width: 30%;">
-                            <input type="file" class="custom-file-input" id="customFile">
+                            <input name="file-input" type="file" class="custom-file-input" id="customFile">
                             <label class="custom-file-label" for="customFile">Nhập Từ File</label>
                         </div>
                         <button class="btn btn-primary mt-1" href="#">Nhập Bằng Tay</button>
                     </div>
-
-
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success mt-1">Xong</button>
                 </div>
             </form>
         </div>

@@ -15,10 +15,12 @@
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "mysql": "2.17.1",
+    "multer": "^1.4.2",
+    "mysql": "^2.17.1",
     "mysql2": "2.0.2",
     "nodemon": "^2.0.2",
-    "sequelize": "5.21.3"
+    "sequelize": "5.21.3",
+    "xlsx": "^0.15.4"
   },
   "description": "Yêu cầu để run project bằng hướng dẫn bên dưới, cài ubuntu subsystem, mở terminal trên thanh công cụ\r     - cài đặt nodejs: sudo apt-get install nodejs\r     - cài đặt nodemon: sudo npm install -g nodemon\r     - cài các node_modules: npm install\r     - sửa lại file .env thông tin cấu hình database\r     - để start server: npm start",
   "main": "app.js",

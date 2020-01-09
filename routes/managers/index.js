@@ -23,6 +23,8 @@ router.get('/inputPlayerList', inputPlayerList.get);
 router.get('/inputPlayerList/inputPlayer', inputPlayer.get);
 router.get('/updateCalendar', updateCalendar.get);
 router.get('/updatePlayerList', updatePlayerList.get);
+
+router.post('/inputPlayerList', inputPlayerList.post);
 // .get('/createEsport', esportTournament.read)
 // .get('/esport/:id',esportTournament.readById)
 // .get('/inputMatchResult', matchResult.read)
