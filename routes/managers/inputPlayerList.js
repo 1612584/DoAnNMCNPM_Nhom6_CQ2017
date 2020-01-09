@@ -16,10 +16,10 @@ const parseDateExcel = excelTimestamp => {
 
 const storage = multer.diskStorage({
   filename: function(req, file, cb) {
-    cb(null, file.originalname);
+    cb(null, "sheet.xlsx");
   },
   destination: function(req, file, cb) {
-    cb(null, `./public/list/`);
+    cb(null, `./public/lists/`);
   }
 });
 const upload = multer({
@@ -37,7 +37,7 @@ module.exports.post = async (req, res) => {
     if (err) {
     }
     var data = [];
-    var workbook = XLSX.readFile("./public/lists/sheet1.xlsx");
+    var workbook = XLSX.readFile("./public/lists/sheet.xlsx");
     var sheet_name_list = workbook.SheetNames;
     sheet_name_list.forEach(function(y) {
       var worksheet = workbook.Sheets[y];
@@ -76,6 +76,8 @@ module.exports.post = async (req, res) => {
       element.birthDay = moment(element.birthDay).format("YYYY-MM-DD");
       const rows = await playerModel.add(element);
     });
-    res.send("ok");
+    res.render("manager/inputPlayerList", {
+      message: "Đã nhập danh sách vận động viên từ file thành công!"
+    });
   });
 };
