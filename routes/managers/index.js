@@ -37,6 +37,6 @@ router.post('/inputPlayerList', inputPlayerList.post);
 
 
 
-router.post('/createEsport', createEsport.post);
+router.post('/createEsport/post', createEsport.post);
 
 module.exports = router;

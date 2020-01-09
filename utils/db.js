@@ -1,4 +1,4 @@
-var mysql = require("mysql");
+var mysql = require('mysql');
 
 function createConnection() {
   return mysql.createConnection({
@@ -8,23 +8,26 @@ function createConnection() {
     user: process.env.db_username,
     password: process.env.db_password
   });
+
 }
 exports.load = sql => {
   return new Promise((resole, reject) => {
     const con = createConnection();
     con.connect(err => {
-      if (err) reject(err);
-    });
-    console.log("connect database successfully");
+      if (err)
+        reject(err);
+
+    })
+    console.log('connect database successfully');
     con.query(sql, (err, results, fields) => {
       if (err) {
-        reject(err);
-      }
+        reject(err)
+      };
       resole(results);
-    });
+    })
     con.end();
-  });
-};
+  })
+}
 
 // const Sequelize = require('sequelize');
 // const user =  process.env.db_username;
