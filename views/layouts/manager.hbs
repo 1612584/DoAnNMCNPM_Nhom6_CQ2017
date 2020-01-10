@@ -13,6 +13,13 @@
 
 <body>
     {{{body}}}
+    <script>
+        $(document).ready(function () {
+            $("#sidebar>ul>li").click(function () {
+                $(this).addClass("active");
+            });
+        });
+    </script>
 </body>
 
 </html>
